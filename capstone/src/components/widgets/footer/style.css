@@ -1,0 +1,41 @@
+.emailSpan {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    padding-left: 2px;
+    margin-right: -2px;
+}
+
+.horizontalRule{
+    width: 75%;
+    height: .5px;
+    margin-left: auto;        
+    margin-right: auto;
+    background-color: #000000;
+    border-color: #000000;
+    opacity: 100;
+}
+
+.contactInfoRow{
+    min-width: 165px !important;
+    max-width: 175px;
+    color: rgb(0, 152, 155);
+    text-align: center;
+}
+
+.footerRow{
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(139,166,143); 
+    height: 225px;
+    padding-top: 20px;
+}
+
+.linkedinButton{
+    height: 20px;
+    padding: 0%;
+    background-color: transparent;
+    opacity: 1;
+    outline: none;
+    border: none;
+}
