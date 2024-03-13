@@ -1,4 +1,5 @@
 import { Container, Row, Col} from 'react-bootstrap';
+import {TableComponent} from '../total_grocery_table';
 
 import './style.css';
 
@@ -9,6 +10,7 @@ export function HeaderComponent() {
             
                 TODO: header component
             </Row>
+            <TableComponent/>
         </Container>
     );
 }
