@@ -1,6 +1,10 @@
 .headerRow{
     background-color: rgb(139,166,143); 
     height: 75px;
-    text-align: center;
     padding-top: 5%;
+}
+.headerContainer{
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
 }

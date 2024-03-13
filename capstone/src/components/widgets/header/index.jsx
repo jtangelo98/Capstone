@@ -5,10 +5,14 @@ import './style.css';
 
 export function HeaderComponent() {
     return (
-        <Container>
+        <Container fluid className = 'headerContainer'>
             <Row className = "headerRow h-100">
-            
-                TODO: header component
+                <Col>
+                    TODO: header component
+                </Col>
+                <Col>
+                    TODO: header component
+                </Col>
             </Row>
             <TableComponent/>
         </Container>

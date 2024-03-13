@@ -1,13 +1,14 @@
 import Papa from 'papaparse';
 import { useState, useEffect } from 'react';
 import { Table } from 'react-bootstrap';
+import { CsvToHtmlTable } from 'react-csv-to-table';
 
 export function TableComponent(){
   const [parsedCsvData, setParsedCsvData] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch('../assets/products_data.csv'); // Path to your CSV file
+    async function fetchData() {
+      const response = await fetch('../../../assets/products_data.csv'); // Path to your CSV file
       const reader = response.body.getReader();
       const result = await reader.read(); // Read the CSV file as binary data
       const decoder = new TextDecoder('utf-8');
@@ -17,7 +18,7 @@ export function TableComponent(){
       setParsedCsvData(rows); // Set parsed CSV data into state
     }
     fetchData();
-  }, []);
+  }, []); 
 
   return (
     <Table striped bordered hover>
