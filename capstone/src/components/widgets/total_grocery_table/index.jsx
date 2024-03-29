@@ -1,7 +1,6 @@
 import Papa from 'papaparse';
 import { useState, useEffect } from 'react';
 import { Table } from 'react-bootstrap';
-import { CsvToHtmlTable } from 'react-csv-to-table';
 
 export function TableComponent(){
   const [parsedCsvData, setParsedCsvData] = useState([]);

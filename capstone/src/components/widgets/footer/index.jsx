@@ -4,8 +4,8 @@ import './style.css';
 
 export function FooterComponent() {
     return (
-        <Container>
-            <Row className='text-center flex-nowrap footerRow'>
+        <Container fluid>
+            <Row className='footerRow'>
                     <p>Contact Information</p>
                     <hr className='horizontalRule'/>
                     <p>Joseph Angelo</p>

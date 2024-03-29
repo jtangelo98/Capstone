@@ -2,5 +2,6 @@
     background-color: rgb(250, 230, 193);
     height: 500px;
     text-align: center;
+    justify-content: center;
     padding-top: 50px;
 }

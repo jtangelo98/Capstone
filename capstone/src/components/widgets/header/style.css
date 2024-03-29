@@ -1,10 +1,28 @@
 .headerRow{
     background-color: rgb(139,166,143); 
-    height: 75px;
-    padding-top: 5%;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
 }
+.titleCol{
+    width:30px;
+    font-size: xx-large;
+    font-family:'Times New Roman';
+    min-width: 280px;
+}
+
+.headerCol{
+    width: 30px;
+    
+}
+
 .headerContainer{
     justify-content: center;
     flex-direction: row;
+    flex-wrap: nowrap;
     align-items: center;
+}
+@font-face {
+    font-family: 'myFont' ;
+    src: url(../../../assets/YoungSerif-Regular.ttf);
 }

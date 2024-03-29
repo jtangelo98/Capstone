@@ -3,9 +3,11 @@ import './style.css';
 
 export function WelcomePage() {
     return (
-        <Row className='welPage'>
-        TODO: Welcome Page
-        </Row>
+      <Container fluid>
+          <Row className='welPage'>
+            
+          </Row>
+        </Container>
   )
 
 }
