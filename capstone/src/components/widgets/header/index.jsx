@@ -3,9 +3,9 @@ import {TableComponent} from '../total_grocery_table';
 
 import './style.css';
 
-// function handleOnClick(){
-//     return TableComponent
-// }
+function handleOnClick(){
+    return TableComponent
+}
 
 export function HeaderComponent() {
     return (
@@ -25,7 +25,7 @@ export function HeaderComponent() {
                     <Button
                         variant = "secondary"
                         size = "lg"
-                        
+                        onClick={handleOnClick()}
                     >
                         Grocery List
                     </Button>
