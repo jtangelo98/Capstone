@@ -3,6 +3,7 @@ import { WelcomePage } from '../../pages/welcome';
 import { HeaderComponent } from '../../widgets/header';
 import { FooterComponent } from "../../widgets/footer";
 import './style.css';
+import TableComponent from '../../widgets/total_grocery_table';
 
 
 

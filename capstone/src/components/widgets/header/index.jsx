@@ -3,9 +3,15 @@ import {TableComponent} from '../total_grocery_table';
 
 import './style.css';
 
-function handleOnClick(){
-    return TableComponent
-}
+// const [showModal, setShowModal] = useState(false);
+
+//   const handleTableClick = () => {
+//     setShowModal(true);
+//   };
+
+//   const handleCloseTable = () => {
+//     setShowModal(false);
+//   };
 
 export function HeaderComponent() {
     return (
@@ -25,7 +31,7 @@ export function HeaderComponent() {
                     <Button
                         variant = "secondary"
                         size = "lg"
-                        onClick={handleOnClick()}
+                        // onClick={handleTableClick()}
                     >
                         Grocery List
                     </Button>
