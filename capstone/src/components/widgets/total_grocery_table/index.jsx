@@ -1,47 +1,44 @@
-import Papa from 'papaparse';
-import { useState, useEffect } from 'react';
-import { Table } from 'react-bootstrap';
+import React, { useState } from 'react';
+import CSVfile from "../../../assets/products_data.csv"
 
-export function TableComponent(){
-  const [parsedCsvData, setParsedCsvData] = useState([]);
+export function CsvTable() {
+  // const [file, setCSVFile] = useState();
+  const file = CSVfile;
+  const [array, setArray] = useState([]);
+  const fileReader = new FileReader();
+  
+  const handleOnChange = (e) => {
+    this.setCSVFile(e.target.files[0]);
+  };
 
-  useEffect(() => {
-    async function fetchData() {
-      const response = await fetch('../../../assets/products_data.csv'); // Path to your CSV file
-      const reader = response.body.getReader();
-      const result = await reader.read(); // Read the CSV file as binary data
-      const decoder = new TextDecoder('utf-8');
-      const csvData = decoder.decode(result.value); // Decode the binary data to CSV string
-      const results = Papa.parse(csvData, {header:true});
-      const rows = results.data;
-      setParsedCsvData(rows); // Set parsed CSV data into state
-    }
-    fetchData();
-  }, []); 
+
+  const csvArray = (string) => {
+    const header = string.slice(0, string.indexOf("\n")).split(",");
+    const rows = string.slice(string.indexOf("\n") + 1).split("\n");
+    const array = rows.map((i) => {
+      const values = i.split(",");
+      const obj = header.reduce((object, header, index) => {
+        object[header] = values[index];
+        return object;
+      }, {});
+      return obj;
+    });
+    this.setArray(array);
+  };
+
+  fileReader.onload = (e) => {
+    this.csvArray(e.target.result);
+  };
+
+  if (file) {
+    fileReader.readAsText(file);
+  }
 
   return (
-    <Table striped bordered hover>
-      <thead>
-        <tr>
-        </tr>
-      </thead>
-        <tbody>
-        {parsedCsvData &&
-            parsedCsvData.map((parsedData, index) => {
-              {console.log(parsedData)}
-              return(
-                <tr key={index}>
+    <div>
 
-                    <td>{parsedData.Name}</td>
-                    <td>{parsedData.price}</td>
-                    <td>{parsedData.PricePerUnit}</td>
-                    <td>{parsedData.Category}</td> 
-                </tr>
-            )})}          
-            
-        </tbody>
-    </Table>
+    </div>
   );
-};
+}
 
-export default TableComponent;
+export default CsvTable();
