@@ -12,8 +12,16 @@
     margin-right: 0px;
 }
 
+.modalTitle{
+    color: ghostwhite;
+}
+
+.groceryModal{
+    background-color: rgb(103, 169, 98);
+}
+
 .headerCol{
-    width: 30px;
+    width: 45px;
     
 }
 

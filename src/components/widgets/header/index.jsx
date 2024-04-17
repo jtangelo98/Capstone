@@ -41,23 +41,24 @@ export function HeaderComponent() {
                 </Col>
             </Row>
             <Modal
-        show={showGrocery}
-        onHide={handleGroceryClose}
-        backdrop="static"
-        keyboard={false}
-      >
-        <Modal.Header closeButton>
-          <Modal.Title>Grocery List</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-         <GroceryTable/>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleGroceryClose}>
-            Close
-          </Button>
-        </Modal.Footer>
-      </Modal>
+            
+            show={showGrocery}
+            onHide={handleGroceryClose}
+            backdrop="static"
+            keyboard={false}
+          >
+            <Modal.Header closeButton className='groceryModal'>
+              <Modal.Title className='modalTitle'>Grocery List</Modal.Title>
+            </Modal.Header>
+            <Modal.Body className='groceryModal'>
+            <GroceryTable/>
+            </Modal.Body>
+            <Modal.Footer className='groceryModal'>
+              <Button variant="secondary" onClick={handleGroceryClose}>
+                Close
+              </Button>
+            </Modal.Footer>
+          </Modal>
         </Container>
     );
 }

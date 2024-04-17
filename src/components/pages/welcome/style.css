@@ -1,7 +1,11 @@
 .welPage{
     background-color: rgb(224, 221, 210);
-    height: 500px;
+    height: 200px;
     text-align: center;
     justify-content: center;
     padding-top: 50px;
+}
+
+.graphRow{
+    background-color: rgb(224, 221, 210);
 }
