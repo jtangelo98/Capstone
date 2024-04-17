@@ -1,4 +1,6 @@
 import { Container, Row, Col, Button} from 'react-bootstrap';
+import { Image } from 'react-bootstrap';
+import logo from "../../../assets/logo2.png";
 import { Modal } from 'react-bootstrap';
 import { GroceryTable } from '../total_grocery_table';
 import './style.css';
@@ -21,12 +23,17 @@ export function HeaderComponent() {
                 <Col className='titleCol'>    
                     Financial Wellness
                 </Col>
-                <Col/>
+                <Col xs >
+                  {/* <Image
+                    src = {logo}
+                    style={{height: '50px'}}
+                  /> */}
+                </Col>
                 <Col/>
                 <Col className='headerCol'>
                     <Button
-                        variant = "secondary"
-                        size = "lg"
+                        variant = "dark"
+                        size = "md"
                         onClick={() =>handleGroceryOpen()}
                     >
                         Grocery List
